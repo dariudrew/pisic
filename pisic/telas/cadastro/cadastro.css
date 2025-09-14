@@ -16,72 +16,46 @@
 
      .main {
       display: flex;
-      width: 100%;
-      justify-content: center;
+      width: 900px;
+      height: 600px;
       border-radius: 30px;
       overflow: hidden;
-      background:none;
-      transition: all 0.8s ease; /* animação na div principal*/
-
-    }
-    .main.invertido .tela-dir {
-      transform: translateX(-58.6%);
-    }
-    .tela-esq {
-      width: clamp(300px, 30vw, 350px); /* mínimo 300, ajusta com viewport, máximo 350 */
-      height: clamp(500px, 70vh, 650px); /* mínimo 500, ajusta com viewport, máximo 650 */
-    }
-
-    .tela-dir {
-      width: clamp(320px, 45vw, 600px); /* mínimo 320, ajusta, máximo 600 */
-      height: clamp(450px, 65vh, 500px); /* mínimo 450, ajusta, máximo 500 */
+      background:none
     }
 
     .tela-esq {
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-     
-      margin-top: 120px;
-      margin-left: 30px;
-      width: 350px;
-      height: 650px;
+      flex: 1;
       background: #142838;
       display: flex;
-     
+      justify-content: center;
+      align-items: center;
       color: white;
       font-size: 70px;
       font-weight: bold;
       border-radius: 60px;
       font-family: 'Rubik Puddles', cursive;
       min-width: 320px;    
-      transition: all 0.8s ease; /* animação na div da logo lateral*/
+      
     }
-   
 
-  .invertido .tela-esq {
-      transform: translateX(171%); /* joga pra direita */
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      height: 700px;
-
-    }
     .tela-esq h1{
       font-size: 70px;
-      font-family: 'Philosopher', cursive; 
+      font-family: 'Philosopher', cursive;
+      width:auto
+    
     }
 
     /* Lado direito */
     .tela-dir {
-      margin-top: 120px;
+      flex: 1.2;
       background: #D9D9D91A;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 30px;
       color: white;
       height: 500px;
-      width: 600px;
       align-self: center;
       border-bottom-right-radius: 60px;
       border-top-right-radius: 60px;
@@ -89,36 +63,16 @@
       box-shadow: 59.1px -59.1px 59.1px 0 rgba(165, 165, 165, 0.10) inset, -59.1px 59.1px 59.1px 0 rgba(255, 255, 255, 0.10) inset;
       backdrop-filter: blur(59.099998474121094px);
       min-width: 320px;
-      transition: all 0.7s ease; /* animação na div de login e cadastro*/      
+     
+      
     }
-
-    .tela-dir.cadastro{
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: 60px;
-      border-bottom-left-radius: 60px;
-      height: 700px;
-    }
-   
 
     .tela-dir h2 {
       margin-bottom: 40px;
       font-size: 45px;
       font-family: 'Tektur';
       font-weight: normal;
-      align-items: center;
     }
-    .tela-dir.cadastro h2 {
-      margin-bottom: 15px;
-      margin-top: 10px;
-      font-size: 45px;
-      font-family: 'Tektur';
-      font-weight: normal;
-      align-items: center;
-      
-    }
-
- 
 
     .input-group {/*caixa do input*/
       position: relative;
@@ -135,7 +89,6 @@
       font-size: 16px;
       
     }
-      .input-group select,
       .input-group input {
       width: 100%;
       padding: 12px 40px 12px 12px; /* espaço extra à esquerda pro ícone */
@@ -148,6 +101,9 @@
       font-family: 'Tektur';
     }
 
+    .input-group input::placeholder {
+      color: rgba(236, 236, 236, 0.6);
+    }
     .input-group input::placeholder {
       color: rgba(236, 236, 236, 0.6);
     }
@@ -177,55 +133,34 @@
       width: 100%;
       margin-top: 50px;
       font-size: 12px;
-      padding-left: 70px;
-      padding-right: 70px;
-      
+      padding-left: 50px;
+      padding-right: 50px;
       font-size: 12px;
     }
-    .links.cadastro {
-      margin-top: 0;
-    }
-    #links-login {
-      display: flex; /* ou block, depende se eu mudar o layout dnv*/
-    }
-    #links-cadastro {
-      display: none;
-      margin-top: 20px;
-    }
-
 
     .links a {
       color: rgba(255,255,255,0.8);
       text-decoration: none;
       transition: 0.3s;
-      cursor: pointer;
     }
 
     .links a:hover {
       color: white;
     }
 
-    .form {
-      display: none;
-      animation: fade .5s ease;   
+    .selecao {
+      position: relative;
+      width: 100%;
+      margin-bottom: 15px;
+      font-family: 'Tektur';
+      background: #D9D9D91A;
+      color: #ffffff;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
       
     }
-   
-    .form-oculto {
-      display: none;
-    }
-
-    .form.active {
-      display: block; 
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* inverter lados */
- 
     
     @media (max-width: 600px) {
     .main {
@@ -252,7 +187,5 @@
     height: auto;   /* altura automática */
     border-radius: 60px; /* remove cantos arredondados (opcional, pode manter se quiser) */
   }
-
-  
 }
       

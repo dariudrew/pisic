@@ -16,9 +16,10 @@
       <h1 class="logo">PIS</h1>IC
     </div>
 
-    <div class="tela-dir">
-      <h2>Login</h2>
-      <form>
+    <div class="tela-dir" id="container">
+      <h2 id="txt-login">Login</h2>
+      <h2 id="txt-cadastro">Cadastro</h2>
+      <form id="form-login" class="form active">
         <div class="input-group">
           <i class="fa-solid fa-envelope"></i>
           <input type="text" placeholder="Email" required>
@@ -29,11 +30,49 @@
         </div>
         <button type="submit">Login</button>
       </form>
-      <div class="links">
-        <a href="link aqui">Não tem uma conta?</a>
+            <!-- Cadastro -->
+      <form id="form-cadastro" class="form">
+        
+        <div class="input-group">
+          <select id="tipo" required>
+            <option value="">-- Selecione --</option>
+            <option value="aluno" selected>Aluno</option>
+            <option value="professor">Professor</option>
+          </select>
+        </div>
+
+        <!-- ALUNO -->
+        <div id="form-aluno" class="form-oculto">
+          <div class="input-group"><input type="text" placeholder="Nome Completo *" required></div>
+          <div class="input-group"><input type="email" placeholder="Email Institucional *" required></div>
+          <div class="input-group"><input type="text" placeholder="Nº de Matrícula"></div>
+          <div class="input-group"><input type="tel" placeholder="Telefone"></div>
+          <div class="input-group"><input type="password" placeholder="Senha *" required></div>
+          <div class="input-group"><input type="password" placeholder="Confirmar Senha *" required></div>
+        </div>
+
+        <!-- PROFESSOR -->
+        <div id="form-professor" class="form-oculto">
+          <div class="input-group"><input type="text" placeholder="Nome Completo *" required></div>
+          <div class="input-group"><input type="email" placeholder="Email Institucional *" required></div>
+          <div class="input-group"><input type="text" placeholder="CPF *" required></div>
+          <div class="input-group"><input type="text" placeholder="SIAPE *" required></div>
+          <div class="input-group"><input type="tel" placeholder="Telefone"></div>
+          <div class="input-group"><input type="password" placeholder="Senha *" required></div>
+          <div class="input-group"><input type="password" placeholder="Confirmar Senha *" required></div>
+        </div>
+
+        <button type="submit" id="btn-cadastrar">Cadastrar</button><!-- -->
+        <div class="links" id="links-cadastro">
+          <a id="to-login">Já tem uma conta?</a>
+        </div>
+      </form>
+      <div class="links" id="links-login">
+        <a id="to-cadastro">Não tem uma conta?</a>
         <a href="link aqui">Esqueceu sua senha?</a>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
