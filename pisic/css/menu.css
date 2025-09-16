@@ -1,0 +1,126 @@
+
+    *{
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+   body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #384D5D;  /* fundo geral*/
+      flex-direction: column;
+      color: #ffffff;
+    
+    } 
+   .cabecalho-menu {
+      display: flex;
+      width: 60%;
+      height: 80px;
+      flex-direction: row;
+      margin-top: 20px;
+      align-items: center;
+      
+      
+    }
+    .logo-parte1{
+        font-family: 'Philosopher', cursive;
+        font-size: 30px;
+        margin-left: 5%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .logo-parte2{
+        font-family: 'Rubik Puddles', cursive;
+        font-size: 30px;
+    }
+    .links-cabecalho{
+
+        background: rgba(20, 40, 56, 0.55);
+        width: 150px;
+        height: 50px;
+        border-radius: 60px;
+        text-align: center;
+        align-content: center;
+        margin-left: 65%;        
+    }
+    .to-usuario, .logout{
+      font-family: 'Tektur';
+      color: #DADADA;
+      cursor: pointer;
+      
+    }
+    .links-cabecalho a:hover{
+      color: rgba(255, 255, 255, 0.884);
+    }
+
+
+    .main-menu{
+      display: flex;
+      flex: auto;
+      width: 800px;
+      height: 550px;
+      border-radius: 60px;
+      background: #D9D9D91A;
+      box-shadow: 59.1px -59.1px 59.1px 0 rgba(165, 165, 165, 0.10) inset, -59.1px 59.1px 59.1px 0 rgba(255, 255, 255, 0.10) inset;
+      margin-top: 30px;
+      flex-direction: column;
+    }
+    .busca{
+      background: none;
+      align-items: flex-start;
+     
+    }
+    form{
+     margin-top: 20px;
+     background: none;
+    }
+    .input-busca{
+        background: #e21111;
+        color: #DADADA;
+    }
+    button{
+     background: #152531;
+     color: #ffffff;
+     border-radius: 30px;
+     width: 30%;
+     height: 30%;
+     font-size: 20px;
+     font-family: 'Tektur';
+     cursor: pointer;
+    }
+    button:hover {
+      background: #13202b;
+    }
+    .btn-buscar{
+      background: #161a413d;
+      color: #ffffff;
+      border-radius: 30px;
+      width: 15%;
+      height: 10%px;
+      font-size: 12px;
+      
+    }
+   #barra-de-busca{
+     background: #D9D9D91A;
+     color: #ffffff;
+     border-radius: 60px;
+     margin-left: 30px;
+     width: 40%;
+     height: 5%;
+   }
+   #barra-de-busca::placeholder {
+     color: #ffffff;   /* mesma cor do texto */
+     opacity: 0.7;     /* opcional, deixa mais fraquinho */
+     font-family: 'Tektur';
+   }
+  .main-servicos{
+    display: flex;
+    flex: auto;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
