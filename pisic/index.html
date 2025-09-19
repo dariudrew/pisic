@@ -22,19 +22,19 @@
       <form id="form-login" class="form active">
         <div class="input-group">
           <i class="fa-solid fa-envelope"></i>
-          <input type="text" placeholder="Email" required>
+          <input type="email" name="email" placeholder="Email" required>
         </div>
         <div class="input-group">
           <i class="fa-solid fa-key"></i>
-          <input type="password" placeholder="Senha" required>
+          <input type="password" name="senha" placeholder="Senha" required>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Entrar</button>
       </form>
             <!-- Cadastro -->
       <form id="form-cadastro" class="form">
         
         <div class="input-group">
-          <select id="tipo" required>
+          <select id="tipo" name="tipo" required>
             <option value="aluno" selected>Aluno</option>
             <option value="professor">Professor</option>
           </select>
@@ -42,23 +42,23 @@
 
         <!-- ALUNO -->
         <div id="form-aluno" class="form-oculto">
-          <div class="input-group"><input type="text" placeholder="Nome Completo *" required></div>
-          <div class="input-group"><input type="email" placeholder="Email Institucional *" required></div>
-          <div class="input-group"><input type="text" placeholder="Nº de Matrícula"></div>
-          <div class="input-group"><input type="tel" placeholder="Telefone"></div>
-          <div class="input-group"><input type="password" placeholder="Senha *" required></div>
-          <div class="input-group"><input type="password" placeholder="Confirmar Senha *" required></div>
+          <div class="input-group"><input type="text" name="nome" placeholder="Nome Completo *" required></div>
+          <div class="input-group"><input type="email" name="email" placeholder="Email Institucional *" required></div>
+          <div class="input-group"><input type="text" name="matricula" placeholder="Nº de Matrícula *"></div>
+          <div class="input-group"><input type="tel" name="telefone" placeholder="Telefone"></div>
+          <div class="input-group"><input type="password" name="senha" placeholder="Senha *" required></div>
+          <div class="input-group"><input type="password" name="confirmarSenha" placeholder="Confirmar Senha *" required></div>
         </div>
 
         <!-- PROFESSOR -->
         <div id="form-professor" class="form-oculto">
-          <div class="input-group"><input type="text" placeholder="Nome Completo *" required></div>
-          <div class="input-group"><input type="email" placeholder="Email Institucional *" required></div>
-          <div class="input-group"><input type="text" placeholder="CPF *" required></div>
-          <div class="input-group"><input type="text" placeholder="SIAPE *" required></div>
-          <div class="input-group"><input type="tel" placeholder="Telefone"></div>
-          <div class="input-group"><input type="password" placeholder="Senha *" required></div>
-          <div class="input-group"><input type="password" placeholder="Confirmar Senha *" required></div>
+          <div class="input-group"><input type="text" name="nomep" placeholder="Nome Completo *" required></div>
+          <div class="input-group"><input type="email" name="emailp" placeholder="Email Institucional *" required></div>
+          <div class="input-group"><input type="text" name="cpfp" placeholder="CPF *" required></div>
+          <div class="input-group"><input type="text" name="siapep" placeholder="SIAPE *" required></div>
+          <div class="input-group"><input type="tel" name="telefonep" placeholder="Telefone"></div>
+          <div class="input-group"><input type="password" name="senhap" placeholder="Senha *" required></div>
+          <div class="input-group"><input type="password" name="confirmarSenhap" placeholder="Confirmar Senha *" required></div>
         </div>
 
         <button type="submit" id="btn-cadastrar">Cadastrar</button><!-- -->
