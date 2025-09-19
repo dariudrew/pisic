@@ -7,7 +7,7 @@ const { authenticateToken, isAdmin } = require("../middleware/authMiddleware");
 const router = express.Router();
 const SECRET_KEY = "sua_chave_secreta_super_segura";
 
-/// 🔹 Rota de auto-cadastro
+// Rota de auto-cadastro
 router.post("/self-register", async (req, res) => {
   try {
     
@@ -44,12 +44,6 @@ router.post("/self-register", async (req, res) => {
         VALUES (?, ?, ?, ?, ?, ?, ?)
       `;
       values = [nome, email, hashedPassword, tipo, cpf || null, siape || null, telefone || null];
-    } else {
-      query = `
-        INSERT INTO usuarios (nome, email, senha, tipo)
-        VALUES (?, ?, ?, ?)
-      `;
-      values = [nome, email, hashedPassword, tipo || "usuario"];
     }
 
     // Inserir no banco
@@ -68,7 +62,7 @@ router.post("/self-register", async (req, res) => {
 });
 
 
-// 🔹 Cadastro de usuário (apenas admin/master pode cadastrar qualquer tipo)
+//Cadastro de usuário (apenas admin/master pode cadastrar qualquer tipo)
 router.post("/register", authenticateToken, isAdmin, (req, res) => {
   const { nome, email, senha, tipo } = req.body;
 
@@ -90,11 +84,11 @@ router.post("/register", authenticateToken, isAdmin, (req, res) => {
   );
 });
 
-// 🔹 Login (qualquer usuário)
+//Login (qualquer usuário)
 router.post("/login", (req, res) => {
   const { email, senha } = req.body;
 
-  db.get("SELECT * FROM users WHERE email = ?", [email], (err, user) => {
+  db.get("SELECT * FROM usuarios WHERE email = ?", [email], (err, user) => {
     if (err) return res.status(500).json({ error: "Erro no servidor" });
     if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
 
